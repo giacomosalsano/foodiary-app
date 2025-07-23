@@ -1,5 +1,5 @@
 import axios from 'axios';
 
 export const httpClient = axios.create({
-  baseURL: 'http://localhost:3333',
+  baseURL: 'https://hcnruwnjwa.execute-api.us-east-1.amazonaws.com',
 });
