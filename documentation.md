@@ -20,6 +20,10 @@
 - **Icons:** Lucide React Native
 - **AI Integration:** OpenAI (via backend API)
 
+<div align="center" style="display: inline_block justify-center"><br>
+  <img src="https://skillicons.dev/icons?i=typescript,js,react,tailwind,nodejs,postgres,figma,github&perline=8" alt="icons" />
+</div>
+
 ### Data Flow
 ```
 1. User uploads photo/audio → 2. File sent to backend (S3) → 3. Backend triggers AI processing → 4. Nutritional info returned → 5. UI updates meal list/statistics

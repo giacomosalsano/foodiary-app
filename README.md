@@ -23,6 +23,10 @@ Mobile app for logging, analyzing, and tracking meals using Artificial Intellige
 - **Axios** (HTTP client)
 - **OpenAI API** (via backend)
 
+<div align="center" style="display: inline_block justify-center"><br>
+  <img src="https://skillicons.dev/icons?i=typescript,js,react,tailwind,nodejs,postgres,figma,github&perline=8" alt="icons" />
+</div>
+
 ## ⚡ How to Run Locally
 1. Clone the repository
 2. Install dependencies:
@@ -36,9 +40,6 @@ Mobile app for logging, analyzing, and tracking meals using Artificial Intellige
 4. Configure the backend API URL if needed (see `src/services/httpClient.ts`)
 5. Run on your device or emulator (Android/iOS/Web)
 
-<div align="center" style="display: inline_block justify-center"><br>
-  <img src="https://skillicons.dev/icons?i=typescript,react,tailwind,js,nodejs,postgres,figma,github&perline=8" alt="icons" />
-</div>
 
 ## 📚 Learn More
 For full details on architecture, flows, components, and improvement suggestions, check the [complete documentation](./documentation.md).
