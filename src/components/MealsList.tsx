@@ -74,19 +74,19 @@ function MealsListHeader({
         <DailyStats
           calories={{
             current: totals.calories,
-            goal: user!.calories,
+            goal: user?.calories ?? 0,
           }}
           proteins={{
             current: totals.proteins,
-            goal: user!.proteins,
+            goal: user?.proteins ?? 0,
           }}
           carbohydrates={{
             current: totals.carbohydrates,
-            goal: user!.carbohydrates,
+            goal: user?.carbohydrates ?? 0,
           }}
           fats={{
             current: totals.fats,
-            goal: user!.fats
+            goal: user?.fats ?? 0,
           }}
         />
       </View>

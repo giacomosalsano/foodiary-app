@@ -43,12 +43,11 @@ function RootLayout() {
 
   useEffect(() => {
     const isFontLoaded = loaded || error;
-    const isUserLoaded = !isLoading;
 
-    if (isFontLoaded && isUserLoaded) {
+    if (isFontLoaded) {
       SplashScreen.hideAsync();
     }
-  }, [loaded, error, isLoading]);
+  }, [loaded, error]);
 
   if (!loaded && !error) {
     return null;

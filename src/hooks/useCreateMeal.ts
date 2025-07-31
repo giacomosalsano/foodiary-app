@@ -27,9 +27,12 @@ export function useCreateMeal({ fileType, onSuccess }: CreateMealParams) {
         uploadType: FileSystem.FileSystemUploadType.BINARY_CONTENT,
       });
 
+      console.log('useCreateMeal uploadAsync');
+
       return { mealId: data.mealId };
     },
     onSuccess: ({ mealId }) => {
+      console.log('useCreateMeal onSuccess');
       onSuccess(mealId);
       queryClient.refetchQueries({ queryKey: ['meals'] });
     },

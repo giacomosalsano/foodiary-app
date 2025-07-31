@@ -18,6 +18,7 @@ export function BirthDateStep() {
           onChangeText={field.onChange}
           error={fieldState.error?.message}
           keyboardType="numeric"
+          returnKeyType="done"
         />
       )}
     />

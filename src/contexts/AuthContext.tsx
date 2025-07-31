@@ -1,6 +1,7 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { useMutation, useQuery } from '@tanstack/react-query';
+import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
 import { createContext, useCallback, useEffect, useState } from 'react';
+import { router } from 'expo-router';
 
 import { httpClient } from '../services/httpClient';
 
@@ -49,6 +50,7 @@ const TOKEN_STORAGE_KEY = '@foodiary::token';
 export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [token, setToken] = useState<string | null>(null);
   const [isLoadingToken, setIsLoadingToken] = useState(true);
+  const queryClient = useQueryClient();
 
   useEffect(() => {
     async function load() {
@@ -79,6 +81,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     mutationFn: async (params: SignInParams) => {
       const { data } = await httpClient.post('/signin', params);
       setToken(data.accessToken);
+      router.replace('/(private)');
     },
   });
 
@@ -86,6 +89,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     mutationFn: async (params: SignUpParams) => {
       const { data } = await httpClient.post('/signup', params);
       setToken(data.accessToken);
+      router.replace('/(private)');
     },
   });
 
@@ -103,13 +107,15 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const signOut = useCallback(async () => {
     setToken(null);
     await AsyncStorage.removeItem(TOKEN_STORAGE_KEY);
-  }, []);
+    queryClient.clear();
+    router.replace('/(public)');
+  }, [queryClient]);
 
   return (
     <AuthContext.Provider
       value={{
-        isLoggedIn: !!user,
-        isLoading: isLoadingToken || isFetching,
+        isLoggedIn: !!token,
+        isLoading: isLoadingToken,
         user: user ?? null,
         signIn,
         signUp,

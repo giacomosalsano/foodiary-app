@@ -104,7 +104,6 @@ export default function SignUp() {
       });
     } catch (error) {
       if (isAxiosError(error)) {
-        console.log(JSON.stringify(error.response?.data, null, 2));
       }
       Alert.alert('Erro ao criar a conta. Tente novamente.');
     }
@@ -112,8 +111,6 @@ export default function SignUp() {
 
   const currentStep = steps[currentStepIndex];
   const isLastStep = currentStepIndex === steps.length - 1;
-
-  console.log(form.formState.errors)
 
   return (
     <AuthLayout

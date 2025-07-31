@@ -19,7 +19,9 @@ export function HomeHeader() {
 
         <TouchableOpacity
           className="size-12 items-center justify-center"
-          onPress={signOut}
+          onPress={() => {
+            signOut();
+          }}
         >
           <LogOutIcon size={20} color={colors.black[700]} />
         </TouchableOpacity>

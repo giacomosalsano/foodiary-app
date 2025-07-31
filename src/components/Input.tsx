@@ -34,6 +34,7 @@ export function Input({ className, mask, onChangeText, label, append, error, ...
           )}
           value={mask ? maskedValue : props.value}
           onChangeText={handleChangeText}
+          returnKeyType="done"
           {...props}
         />
 
