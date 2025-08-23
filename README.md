@@ -2,15 +2,6 @@
 
 Mobile app for logging, analyzing, and tracking meals using Artificial Intelligence (OpenAI). Allows photo or audio uploads, automatically processes foods, and calculates personalized nutritional information.
 
-## 🚀 Main Features
-- Upload meals by **photo** or **audio**
-- Automatic processing with **real AI** (OpenAI Whisper + GPT-4 Vision)
-- Calorie and macronutrient calculation
-- Personalized nutritional goals
-- JWT authentication
-- Modern, mobile-first UX
-- Seamless integration with serverless backend
-
 ## 🏗️ Tech Stack
 - **React Native (Expo)**
 - **TypeScript**
@@ -26,6 +17,15 @@ Mobile app for logging, analyzing, and tracking meals using Artificial Intellige
 <div align="center" style="display: inline_block justify-center"><br>
   <img src="https://skillicons.dev/icons?i=typescript,js,react,tailwind,nodejs,postgres,figma,github&perline=8" alt="icons" />
 </div>
+
+## 🚀 Main Features
+- Upload meals by **photo** or **audio**
+- Automatic processing with **real AI** (OpenAI Whisper + GPT-4 Vision)
+- Calorie and macronutrient calculation
+- Personalized nutritional goals
+- JWT authentication
+- Modern, mobile-first UX
+- Seamless integration with serverless backend
 
 ## ⚡ How to Run Locally
 1. Clone the repository
